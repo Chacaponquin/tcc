@@ -37,6 +37,11 @@
     src: url("./fonts/Inter/Inter-ExtraBold.ttf");
 }
 
+@font-face {
+    font-family: "Inter SemiBold";
+    src: url("./fonts/Inter/Inter-SemiBold.ttf");
+}
+
 * {
     font-family: "Inter Regular";
 }

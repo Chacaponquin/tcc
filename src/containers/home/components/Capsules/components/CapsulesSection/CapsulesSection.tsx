@@ -17,7 +17,7 @@ export default function CapsulesSection() {
           />
 
           <div className="text-xl mt-2">
-            <p>Capsule</p>
+            <p className="font-InterSemiBold">Capsule</p>
             <h1 className="uppercase font-InterExtraBold">{c.title}</h1>
           </div>
         </div>

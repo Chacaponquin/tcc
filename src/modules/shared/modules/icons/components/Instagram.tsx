@@ -15,7 +15,7 @@ export default function Instagram({ size = DEFAULT_ICON_SIZE }: IconProps) {
         d="M34 6H14C9.58172 6 6 9.58172 6 14V34C6 38.4183 9.58172 42 14 42H34C38.4183 42 42 38.4183 42 34V14C42 9.58172 38.4183 6 34 6Z"
         fill="none"
         stroke="inherit"
-        stroke-width="4"
+        strokeWidth="4"
         strokeLinejoin="round"
       />
       <path

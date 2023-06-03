@@ -14,6 +14,7 @@ module.exports = {
         DrunkBold: "Drunk Bold",
         InterBold: "Inter Bold",
         InterExtraBold: "Inter Extra-Bold",
+        InterSemiBold: "Inter SemiBold"
       },
       colors: {
         instagramColor: "#E1306C",
