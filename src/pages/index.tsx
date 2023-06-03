@@ -1,5 +1,10 @@
 import React from "react";
-import { Capsulels, Footer, Navbar, Presentation } from "./home/components";
+import {
+  Capsulels,
+  Footer,
+  Navbar,
+  Presentation,
+} from "../containers/home/components";
 
 export default function Root() {
   return (
