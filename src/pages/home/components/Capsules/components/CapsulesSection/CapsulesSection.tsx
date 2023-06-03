@@ -16,7 +16,7 @@ export default function CapsulesSection() {
             style={{ objectFit: "cover" }}
           />
 
-          <div className="text-xl">
+          <div className="text-xl mt-2">
             <p>Capsule</p>
             <h1 className="uppercase font-InterExtraBold">{c.title}</h1>
           </div>

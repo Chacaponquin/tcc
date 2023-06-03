@@ -37,6 +37,7 @@ export default function RootLayout({
         />
         <link rel="manifest" href="/favicon/site.webmanifest" />
       </Head>
+
       {children}
     </React.Fragment>
   );
