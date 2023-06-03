@@ -6,7 +6,7 @@ const TEXT = "(DEJA QUE FLOREZCA PORQUE HAY BELLEZA EN LO SIMPLE)";
 
 export default function Presentation() {
   return (
-    <section className="min-h-screen bg-white flex justify-center py-[75px]">
+    <section className="min-h-screen bg-white flex justify-center py-[100px]">
       <div className="w-full max-w-[1400px] flex justify-center items-center px-20 xl:flex-row flex-col gap-20 esm:px-10">
         <Image
           src={IMAGES.FLOWER.src}
