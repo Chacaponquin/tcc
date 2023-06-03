@@ -15,7 +15,14 @@ module.exports = {
         InterBold: "Inter Bold",
         InterExtraBold: "Inter Extra-Bold",
       },
-      colors: {},
+      colors: {
+        instagramColor: "#E1306C",
+      },
+      screens: {
+        exsm: { max: "400px" },
+        esm: { max: "640px" },
+        "2xl": { min: "1400px" },
+      },
     },
   },
   plugins: [],

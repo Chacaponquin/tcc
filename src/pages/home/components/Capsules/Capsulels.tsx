@@ -5,7 +5,7 @@ import "./capsules.css";
 
 export default function Capsulels() {
   return (
-    <section className="h-screen flex w-full justify-center">
+    <section className="min-h-screen flex w-full justify-center">
       <div className="w-full max-w-[1400px] px-10">
         <CapsulesHeader />
         <CapsulesSection />
