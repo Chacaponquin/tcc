@@ -1,4 +1,7 @@
+import { ROUTES } from "@/app/constants/ROUTES";
+import { PrimaryButton } from "@/modules/shared/modules/buttons/components";
 import { Instagram } from "@/modules/shared/modules/icons/components";
+import Link from "next/link";
 import React from "react";
 
 export default function Navbar() {
@@ -16,15 +19,19 @@ export default function Navbar() {
           </div>
         </div>
 
-        <div>
+        <div className="flex gap-x-6 items-center">
           <a
             className="stroke-black hover:stroke-instagramColor transition-all duration-300"
             href="https://instagram.com/esteban_fndez?igshid=ZDc4ODBmNjlmNQ=="
             rel="noreferrer"
             target="_blank"
           >
-            <Instagram size={32} />
+            <Instagram size={30} />
           </a>
+
+          <Link href={ROUTES.LOGIN}>
+            <PrimaryButton text="Login" size="medium" />
+          </Link>
         </div>
       </div>
     </nav>

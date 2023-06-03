@@ -4,6 +4,7 @@ module.exports = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/containers/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/modules/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
@@ -14,7 +15,7 @@ module.exports = {
         DrunkBold: "Drunk Bold",
         InterBold: "Inter Bold",
         InterExtraBold: "Inter Extra-Bold",
-        InterSemiBold: "Inter SemiBold"
+        InterSemiBold: "Inter SemiBold",
       },
       colors: {
         instagramColor: "#E1306C",
