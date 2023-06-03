@@ -13,7 +13,7 @@ export default function Navbar() {
             TCC
           </h1>
 
-          <div className="flex flex-col text-lg">
+          <div className="flex flex-col text-lg exsm:hidden">
             <p className="font-CairoItalicBold">TCC</p>
             <p className="font-CairoItalicBold">+ TCC Co.</p>
           </div>
