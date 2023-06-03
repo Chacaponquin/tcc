@@ -10,6 +10,10 @@ module.exports = {
       fontFamily: {
         CairoItalic: "Calisto Italic",
         CairoItalicBold: "Calisto Italic Bold",
+        Drunk: "Drunk Regular",
+        DrunkBold: "Drunk Bold",
+        InterBold: "Inter Bold",
+        InterExtraBold: "Inter Extra-Bold",
       },
       colors: {},
     },

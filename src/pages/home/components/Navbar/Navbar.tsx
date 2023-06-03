@@ -3,8 +3,8 @@ import React from "react";
 
 export default function Navbar() {
   return (
-    <nav className="w-full px-4 flex justify-center py-5 bg-white absolute top-0">
-      <div className="max-w-[1400px] items-center flex w-full justify-between">
+    <nav className="w-full px-20 flex justify-center py-5 bg-white fixed top-0">
+      <div className="items-center flex w-full justify-between">
         <div className="flex gap-x-10 items-center">
           <h1 className="text-5xl uppercase font-CairoItalicBold font-bold">
             TCC

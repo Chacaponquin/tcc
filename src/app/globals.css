@@ -11,3 +11,32 @@
     font-family:  "Calisto Italic Bold";
     src: url("./fonts/Calisto/CALISTBI.ttf");
 }
+
+@font-face {
+    font-family: "Drunk Regular";
+    src: url("./fonts/Druk/DrukTextWide-Medium-Trial.otf");
+}
+
+@font-face {
+    font-family: "Drunk Bold";
+    src: url("./fonts/Druk/DrukTextWide-Bold-Trial.otf");
+}
+
+@font-face {
+    font-family: "Inter Regular";
+    src: url("./fonts/Inter/Inter-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Inter Bold";
+    src: url("./fonts/Inter/Inter-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Inter Extra-Bold";
+    src: url("./fonts/Inter/Inter-ExtraBold.ttf");
+}
+
+* {
+    font-family: "Inter Regular";
+}

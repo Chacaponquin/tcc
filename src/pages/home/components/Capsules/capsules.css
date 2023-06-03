@@ -1,0 +1,24 @@
+.capsules-section{
+    display: grid;
+    grid-template-columns: 700px repeat(2, auto);
+    grid-template-rows: repeat(2, minmax(250px, auto));
+    grid-auto-flow: column;
+}
+
+.capsules-section div:nth-child(1){
+    grid-column:1 ;
+    grid-row: span 2 / span 2;
+
+}
+
+.capsules-section div:nth-child(2),.capsules-section div:nth-child(4){
+    
+}
+
+.capsules-section img{
+    height: 100%;
+}
+
+.capsules-section div:nth-child(1) img{
+    width: 100%;
+}
