@@ -16,7 +16,7 @@
         grid-auto-flow: column;
     } 
 
-    .capsules-section div:nth-child(1){
+    .capsules-section a:nth-child(1){
         grid-column:1 ;
         grid-row: span 2 / span 2;
     }
