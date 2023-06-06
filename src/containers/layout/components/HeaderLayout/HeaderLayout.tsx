@@ -1,21 +1,20 @@
 import React from "react";
 import Head from "next/head";
 
-import "../app/globals.css";
-
-export default function RootLayout({
+export default function HeaderLayout({
   children,
+  title,
+  description,
 }: {
   children: React.ReactNode;
+  title: string;
+  description: string;
 }) {
   return (
     <React.Fragment>
       <Head>
-        <title>The Crystal Chapel</title>
-        <meta
-          name="description"
-          content="Test website for The Crystal Chapel"
-        />
+        <title>{title}</title>
+        <meta name="description" content={description} />
 
         <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico" />
         <link
