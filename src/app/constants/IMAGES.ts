@@ -11,4 +11,8 @@ export const IMAGES = {
     src: "/images/flower_text.png",
     alt: "flower_with_text tcc",
   },
+  TEST: {
+    src: "/images/test.jpg",
+    alt: "flower_with_text tcc",
+  },
 } as const;
