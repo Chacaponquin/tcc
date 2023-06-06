@@ -18,5 +18,9 @@ export function useUserServices() {
     }
   }
 
-  return { loginUser, user };
+  async function signOut() {
+    await supabase.auth.signOut();
+  }
+
+  return { loginUser, user, signOut };
 }

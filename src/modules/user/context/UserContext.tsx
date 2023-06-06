@@ -21,6 +21,8 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
     if (session !== null) {
       const user = session.user;
       handleChangeUser(transformFromSupabaseUser(user));
+    } else {
+      setUser(null);
     }
   });
 

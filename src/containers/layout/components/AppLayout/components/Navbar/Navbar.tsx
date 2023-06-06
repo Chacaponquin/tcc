@@ -4,6 +4,7 @@ import { Instagram } from "@/modules/shared/modules/icons/components";
 import { useUserServices } from "@/modules/user/services";
 import Link from "next/link";
 import React from "react";
+import { UserOptions } from "./components";
 
 export default function Navbar() {
   const { user } = useUserServices();
@@ -37,7 +38,7 @@ export default function Navbar() {
               <PrimaryButton text="Login" size="medium" />
             </Link>
           ) : (
-            <React.Fragment></React.Fragment>
+            <UserOptions />
           )}
         </div>
       </div>
