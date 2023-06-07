@@ -1,6 +1,6 @@
 import { LoginUserDTO } from "@/modules/user/dto/LoginUser.dto";
 import { useUserServices } from "@/modules/user/services";
-import React, { useState } from "react";
+import { useState } from "react";
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
 import { ROUTES } from "@/app/constants/ROUTES";
@@ -24,9 +24,7 @@ export function useLogin() {
     setLoginForm({ ...loginForm, [key]: value });
   }
 
-  async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
-
+  async function handleSubmit() {
     try {
       setLoading(true);
       await loginUser(loginForm);

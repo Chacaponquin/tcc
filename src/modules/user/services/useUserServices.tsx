@@ -6,7 +6,7 @@ import { IncorrectLoginUser } from "../exceptions";
 
 export function useUserServices() {
   const { supabase } = useContext(SupabaseContext);
-  const { user } = useContext(UserContext);
+  const { user, initFetchUserLoading } = useContext(UserContext);
 
   async function loginUser(userDTO: LoginUserDTO): Promise<void> {
     const response = await supabase.auth.signInWithPassword(userDTO);
@@ -22,5 +22,5 @@ export function useUserServices() {
     await supabase.auth.signOut();
   }
 
-  return { loginUser, user, signOut };
+  return { loginUser, user, signOut, initFetchUserLoading };
 }

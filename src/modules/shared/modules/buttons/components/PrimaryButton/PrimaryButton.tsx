@@ -1,7 +1,7 @@
 import React from "react";
 import { ButtonProps } from "../../interfaces/button.interface";
 import clsx from "clsx";
-import { RaceBy } from "@uiball/loaders";
+import { Loader } from "@/app/components";
 
 export default function PrimaryButton({
   size,
@@ -18,7 +18,7 @@ export default function PrimaryButton({
     <React.Fragment>
       {loading ? (
         <div className="h-[35px] w-[118px] flex justify-end items-center">
-          <RaceBy size={80} lineWeight={5} speed={1.4} color="black" />
+          <Loader />
         </div>
       ) : (
         <button className={buttonClass} onClick={onClick}>

@@ -6,16 +6,19 @@ import { User } from "@supabase/supabase-js";
 interface UserContextProps {
   user: CurrentUser | null;
   handleChangeUser: (newUser: CurrentUser) => void;
+  initFetchUserLoading: boolean;
 }
 
 export const UserContext = createContext<UserContextProps>({
   user: null,
   handleChangeUser: () => {},
+  initFetchUserLoading: true,
 });
 
 export function UserProvider({ children }: { children: React.ReactNode }) {
   const { supabase } = useContext(SupabaseContext);
   const [user, setUser] = useState<CurrentUser | null>(null);
+  const [initFetchUserLoading, setInitFetchUserLoading] = useState(true);
 
   supabase.auth.onAuthStateChange((event, session) => {
     if (session !== null) {
@@ -24,6 +27,8 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
     } else {
       setUser(null);
     }
+
+    setInitFetchUserLoading(false);
   });
 
   function handleChangeUser(newUser: CurrentUser) {
@@ -40,6 +45,7 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
       value={{
         user,
         handleChangeUser,
+        initFetchUserLoading,
       }}
     >
       {children}

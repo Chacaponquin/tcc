@@ -3,48 +3,45 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: "Calisto Italic" ;
-    src: url("./fonts/Calisto/CALISTI.TTF");
+  font-family: "Calisto Italic";
+  src: url("./fonts/Calisto/CALISTI.TTF");
 }
 
 @font-face {
-    font-family:  "Calisto Italic Bold";
-    src: url("./fonts/Calisto/CALISTBI.ttf");
+  font-family: "Calisto Italic Bold";
+  src: url("./fonts/Calisto/CALISTBI.ttf");
 }
 
 @font-face {
-    font-family: "Drunk Regular";
-    src: url("./fonts/Druk/DrukTextWide-Medium-Trial.otf");
+  font-family: "Drunk Regular";
+  src: url("./fonts/Druk/DrukTextWide-Medium-Trial.otf");
 }
 
 @font-face {
-    font-family: "Drunk Bold";
-    src: url("./fonts/Druk/DrukTextWide-Bold-Trial.otf");
+  font-family: "Drunk Bold";
+  src: url("./fonts/Druk/DrukTextWide-Bold-Trial.otf");
 }
 
 @font-face {
-    font-family: "Inter Regular";
-    src: url("./fonts/Inter/Inter-Regular.ttf");
+  font-family: "Inter Regular";
+  src: url("./fonts/Inter/Inter-Regular.ttf");
 }
 
 @font-face {
-    font-family: "Inter Bold";
-    src: url("./fonts/Inter/Inter-Bold.ttf");
+  font-family: "Inter Bold";
+  src: url("./fonts/Inter/Inter-Bold.ttf");
 }
 
 @font-face {
-    font-family: "Inter Extra-Bold";
-    src: url("./fonts/Inter/Inter-ExtraBold.ttf");
+  font-family: "Inter Extra-Bold";
+  src: url("./fonts/Inter/Inter-ExtraBold.ttf");
 }
 
 @font-face {
-    font-family: "Inter SemiBold";
-    src: url("./fonts/Inter/Inter-SemiBold.ttf");
+  font-family: "Inter SemiBold";
+  src: url("./fonts/Inter/Inter-SemiBold.ttf");
 }
 
 * {
-    font-family: "Inter Regular";
-    stroke: black;
-
-    
+  font-family: "Inter Regular";
 }

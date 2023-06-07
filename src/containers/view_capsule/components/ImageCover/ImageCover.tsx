@@ -11,10 +11,10 @@ export default function ImageCover() {
       }}
     >
       <div className="flex flex-col max-w-[550px] gap-y-3 items-center">
-        <h1 className="py-3 px-6 font-DrunkBold text-2xl text-white bg-black w-max text-center">
+        <h1 className="py-3 px-6 font-DrunkBold rounded esm:text-lg esm:py-2 esm:px-5 text-2xl text-white bg-black w-max text-center">
           Lorem, ipsum dolor.
         </h1>
-        <div className="bg-black text-white text-base py-4 px-8 rounded-sm">
+        <div className="bg-black text-white text-base py-3 px-8 rounded esm:px-6 esm:py-2">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
           sapiente inventore beatae fuga sed doloremque ducimus atque? Pariatur
           odit modi sed non, ratione at repudiandae provident, aut quibusdam et

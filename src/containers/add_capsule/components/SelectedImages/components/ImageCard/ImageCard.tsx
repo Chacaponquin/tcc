@@ -17,8 +17,6 @@ export default React.memo(function ImageCard({
   name,
   handleDeleteImage,
 }: ImageCardProps) {
-  console.log(`Rendeer ${name} ${url}`);
-
   return (
     <div className="flex items-center py-2 px-5 gap-x-8 shadow-md rounded-sm">
       <div className="flex items-center gap-x-4">
@@ -41,7 +39,7 @@ export default React.memo(function ImageCard({
         <p>{name}</p>
 
         <button
-          className="hover:stroke-red-500 transition-all duration-300"
+          className="hover:stroke-red-500 transition-all duration-300 stroke-black"
           onClick={handleDeleteImage}
         >
           <Delete size={20} />

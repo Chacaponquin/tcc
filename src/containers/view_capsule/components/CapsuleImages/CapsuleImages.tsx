@@ -2,12 +2,14 @@ import { IMAGES } from "@/app/constants/IMAGES";
 import Image from "next/image";
 import React from "react";
 
+import "./capsuleImages.css";
+
 export default function CapsuleImages() {
   return (
-    <section className="w-full py-20 px-10 flex justify-center">
-      <div className="grid grid-cols-3 gap-3">
+    <section className="w-full pb-20 px-10 flex justify-center esm:pb-10">
+      <div className="grid grid-cols-2 esm:grid-cols-1 gap-2 xl:grid-cols-3">
         {[1, 2, 3, 4, 5].map((image, i) => (
-          <div key={i}>
+          <div key={i} className="flex justify-center">
             <Image
               src={IMAGES.TEST.src}
               alt={IMAGES.TEST.alt}
