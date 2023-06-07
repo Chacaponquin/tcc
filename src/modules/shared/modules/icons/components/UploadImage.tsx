@@ -32,9 +32,9 @@ export default function UploadImage({ size = DEFAULT_ICON_SIZE }: IconProps) {
       <path
         d="M37 18L37 6"
         stroke="inherit"
-        stroke-width="4"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="4"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M32 11L37 6L42 11"

@@ -2,14 +2,12 @@ import Image from "next/image";
 import React from "react";
 import { IMAGES } from "../../app/constants/IMAGES";
 import { useLogin } from "../../containers/login/hooks";
-import { Toaster } from "react-hot-toast";
 
 export default function Login() {
   const { handleChange, handleSubmit, loginForm } = useLogin();
 
   return (
     <div className="h-screen w-full flex justify-center items-center">
-      <Toaster />
       <div className="shadow-xl px-14 py-6 rounded-sm border-2">
         <Image
           src={IMAGES.FLOWER_WITH_TEXT.src}

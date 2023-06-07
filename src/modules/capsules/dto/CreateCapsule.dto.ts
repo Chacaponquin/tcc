@@ -1,5 +1,5 @@
 export interface CreateCapsuleDTO {
-  images: [];
+  images: File[];
   imageCover: number;
   title: string;
   description: string;

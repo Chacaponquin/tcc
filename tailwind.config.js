@@ -19,6 +19,7 @@ module.exports = {
       },
       colors: {
         instagramColor: "#E1306C",
+        primaryColor: "#000000",
       },
       screens: {
         exsm: { max: "400px" },
