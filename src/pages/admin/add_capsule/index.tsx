@@ -20,6 +20,7 @@ export default function AddCapsule() {
     handleChangeCapsuleTitle,
     handleDeleteImage,
     handleSubmit,
+    loading,
   } = useAddCapsule();
 
   return (
@@ -44,7 +45,7 @@ export default function AddCapsule() {
               title={capsuleForm.title}
               description={capsuleForm.description}
             />
-            <ButtonsSection handleSubmit={handleSubmit} />
+            <ButtonsSection handleSubmit={handleSubmit} loading={loading} />
           </div>
         </div>
       </AdminRoute>

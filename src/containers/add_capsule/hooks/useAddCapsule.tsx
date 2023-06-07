@@ -11,6 +11,7 @@ import { toast } from "react-hot-toast";
 
 export function useAddCapsule() {
   const { createCapsule } = useCapsulesServices();
+  const [loading, setLoading] = useState(false);
   const [capsuleForm, setCapsuleForm] = useState<CreateCapsuleDTO>({
     description: "",
     imageCover: -1,
@@ -50,6 +51,15 @@ export function useAddCapsule() {
     });
   }
 
+  function resetForm(): void {
+    setCapsuleForm({
+      description: "",
+      imageCover: -1,
+      images: [],
+      title: "",
+    });
+  }
+
   function handleChangeImages(e: ChangeEvent<HTMLInputElement>) {
     const files = e.target.files;
 
@@ -76,11 +86,13 @@ export function useAddCapsule() {
 
   async function handleSubmit() {
     try {
+      setLoading(true);
       await createCapsule(capsuleForm);
       toast.success("Cápsula creada con éxito.");
+      resetForm();
     } catch (error) {
       if (error instanceof NoImagesError) {
-        toast.error("Debes insertar al menos una imagen");
+        toast.error("Debes insertar al menos una imagen.");
       } else if (error instanceof NotImageCoverError) {
         toast.error(
           "Debes seleccionar al menos una imagen para que sea portada."
@@ -93,6 +105,8 @@ export function useAddCapsule() {
         console.log(error);
         toast.error("Hubo un error");
       }
+    } finally {
+      setLoading(false);
     }
   }
 
@@ -106,5 +120,6 @@ export function useAddCapsule() {
     handleChangeCapsuleTitle,
     handleDeleteImage,
     handleSubmit,
+    loading,
   };
 }
