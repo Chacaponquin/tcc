@@ -10,6 +10,8 @@ import {
   NotImageCoverError,
   UploadImageError,
 } from "../exceptions";
+import { Capsule, CapsuleImage } from "../interfaces/capsule.interface";
+import { ConnectionError } from "@/app/exceptions";
 
 export function useCapsulesServices() {
   const { supabase } = useContext(SupabaseContext);
@@ -47,7 +49,15 @@ export function useCapsulesServices() {
         throw new UploadImageError();
       } else {
         if (data) {
-          imagesPaths.push(data.path);
+          const { data: storageData } = supabase.storage
+            .from("capsule_images")
+            .getPublicUrl(data.path, {});
+
+          if (error) {
+            throw new UploadImageError();
+          } else {
+            imagesPaths.push(storageData.publicUrl);
+          }
         } else {
           throw new UploadImageError();
         }
@@ -90,5 +100,26 @@ export function useCapsulesServices() {
     }
   }
 
-  return { createCapsule };
+  async function getAllCapsules(): Promise<Array<Capsule>> {
+    const capsules = await supabase
+      .from("capsule")
+      .select("id, title, description, capsule_image(image_url, is_cover, id)");
+
+    if (capsules.error) {
+      throw new ConnectionError();
+    }
+
+    return capsules.data.map((c) => {
+      return {
+        id: c.id,
+        description: c.description,
+        images: c.capsule_image,
+        title: c.title,
+        image_cover: (c.capsule_image.find((i) => i.is_cover) as CapsuleImage)
+          .image_url,
+      };
+    });
+  }
+
+  return { createCapsule, getAllCapsules };
 }
