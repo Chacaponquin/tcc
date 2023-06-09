@@ -32,7 +32,10 @@ export default React.memo(
     );
   },
   (oldProps, newProps) => {
-    if (oldProps.images !== newProps.images) {
+    if (
+      oldProps.images !== newProps.images ||
+      oldProps.imageCover !== newProps.imageCover
+    ) {
       return false;
     }
 

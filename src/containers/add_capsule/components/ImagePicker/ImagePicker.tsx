@@ -26,7 +26,7 @@ export default function ImagePicker({
 
       <div className="flex flex-col items-center gap-y-2">
         <UploadImage size={43} />
-        <p className="text-xl font-InterSemiBold">Elegir Imagen</p>
+        <p className="text-xl font-InterSemiBold text-center">Elegir Imagen</p>
       </div>
     </div>
   );

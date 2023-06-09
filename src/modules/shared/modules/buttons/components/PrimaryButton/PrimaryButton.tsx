@@ -10,7 +10,7 @@ export default function PrimaryButton({
   loading = false,
 }: ButtonProps) {
   const buttonClass = clsx(
-    "bg-black text-white font-InterSemiBold py-1.5 px-8 transition-all duration-300 hover:opacity-70",
+    "bg-black text-white font-InterSemiBold py-1.5 px-8 esm:px-6 transition-all duration-300 hover:opacity-70",
     { "text-lg": size === "medium" }
   );
 

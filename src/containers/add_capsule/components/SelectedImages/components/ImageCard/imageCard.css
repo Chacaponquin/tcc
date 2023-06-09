@@ -1,0 +1,3 @@
+.image-card-name p {
+  width: calc(100% - 40px);
+}

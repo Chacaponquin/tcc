@@ -10,8 +10,8 @@ export default function Login() {
 
   return (
     <HeaderLayout title="Login" description="TCC Login">
-      <div className="h-screen w-full flex justify-center items-center">
-        <div className="shadow-xl px-14 py-6 rounded-sm border-2">
+      <div className="h-screen w-full flex justify-center items-center px-5">
+        <div className="shadow-xl px-14 esm:px-10 py-6 rounded-sm border-2">
           <Image
             src={IMAGES.FLOWER_WITH_TEXT.src}
             alt={IMAGES.FLOWER_WITH_TEXT.alt}
@@ -38,7 +38,7 @@ export default function Login() {
               </div>
 
               <div className="gap-y-2 flex flex-col">
-                <label htmlFor="" className="font-InterBold text-xl">
+                <label htmlFor="password" className="font-InterBold text-xl">
                   Contraseña:
                 </label>
                 <input
@@ -48,6 +48,7 @@ export default function Login() {
                   className="bg-slate-200 px-4 py-1.5 w-full outline-none focus:outline-2 focus:outline-black"
                   placeholder="Contraseña..."
                   onChange={(e) => handleChange("password", e.target.value)}
+                  id="password"
                 />
               </div>
             </div>

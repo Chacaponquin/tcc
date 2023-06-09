@@ -8,6 +8,7 @@ export default function ImageCover() {
         backgroundImage: `url("https://media.npr.org/assets/img/2021/08/11/gettyimages-1279899488_wide-f3860ceb0ef19643c335cb34df3fa1de166e2761-s1600-c85.webp")`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
+        backgroundPosition: "center",
       }}
     >
       <div className="flex flex-col max-w-[550px] gap-y-3 items-center">

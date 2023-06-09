@@ -26,7 +26,7 @@ export default function AddCapsule() {
   return (
     <AppLayout title="Add Capsule" description="Add Capsule">
       <AdminRoute>
-        <div className="py-[80px] w-full min-h-screen flex justify-center items-center px-6 flex-col">
+        <div className="py-[85px] w-full min-h-screen flex justify-center items-center px-6 flex-col">
           <div className="shadow-lg px-8 py-5 flex flex-col w-full max-w-[550px] gap-y-3 border-2 border-slate-300 rounded-sm">
             <ImagePicker
               imageInputRef={imageInputRef}

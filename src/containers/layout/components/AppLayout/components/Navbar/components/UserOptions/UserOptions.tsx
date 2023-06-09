@@ -19,7 +19,7 @@ export default function UserOptions() {
   return (
     <div className="flex justify-end">
       <button
-        className="stroke-black rounded-full flex justify-center items-center w-[42px] h-[42px] bg-slate-200"
+        className="stroke-black rounded-full flex justify-center items-center w-[42px] h-[42px] bg-slate-200 esm:w-[35px] esm:h-[35px]"
         onClick={handleViewOptions}
       >
         <User size={20} />
