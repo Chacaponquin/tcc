@@ -1,7 +1,7 @@
 import { ROUTES } from "@/app/constants/ROUTES";
 import { useUserServices } from "@/modules/user/services";
 import { useRouter } from "next/navigation";
-import React from "react";
+import React, { useEffect } from "react";
 
 export default function AdminRoute({
   children,
@@ -9,12 +9,13 @@ export default function AdminRoute({
   children: React.ReactNode;
 }) {
   const route = useRouter();
-  const { user } = useUserServices();
+  const { user, initFetchUserLoading } = useUserServices();
 
-  if (!user) {
-    console.log(route);
-    route.replace(ROUTES.ROOT);
-  }
+  useEffect(() => {
+    if (!user && !initFetchUserLoading) {
+      route.replace(ROUTES.ROOT);
+    }
+  }, [route, user, initFetchUserLoading]);
 
   return <React.Fragment>{children}</React.Fragment>;
 }
