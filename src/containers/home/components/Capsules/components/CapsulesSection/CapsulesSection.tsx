@@ -18,7 +18,7 @@ export default function CapsulesSection({
         <Link
           className="w-full flex-col flex transition-all duration-300 hover:scale-105 cursor-pointer"
           key={c.id}
-          href={`/view/${c.id}`}
+          href={c.route}
         >
           <Image
             width={400}

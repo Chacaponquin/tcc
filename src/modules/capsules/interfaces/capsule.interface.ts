@@ -4,6 +4,7 @@ export interface Capsule {
   id: number;
   description: string;
   image_cover: string;
+  route: string;
 }
 
 export interface CapsuleImage {

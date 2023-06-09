@@ -12,6 +12,7 @@ import {
 } from "../exceptions";
 import { Capsule, CapsuleImage } from "../interfaces/capsule.interface";
 import { ConnectionError } from "@/app/exceptions";
+import { ROUTES } from "@/app/constants/ROUTES";
 
 export function useCapsulesServices() {
   const { supabase } = useContext(SupabaseContext);
@@ -113,13 +114,41 @@ export function useCapsulesServices() {
       return {
         id: c.id,
         description: c.description,
-        images: c.capsule_image,
+        images: c.capsule_image.filter((i) => !i.is_cover),
         title: c.title,
         image_cover: (c.capsule_image.find((i) => i.is_cover) as CapsuleImage)
           .image_url,
+        route: ROUTES.CAPSULE_VIEW(c.id),
       };
     });
   }
 
-  return { createCapsule, getAllCapsules };
+  async function findCapsuleById(id: number): Promise<Capsule | null> {
+    const foundCapsule = await supabase
+      .from("capsule")
+      .select("id, title, description, capsule_image(image_url, is_cover, id)")
+      .eq("id", id);
+
+    if (foundCapsule.error) {
+      throw new ConnectionError();
+    } else {
+      if (foundCapsule.data.length === 0) {
+        return null;
+      } else {
+        const first = foundCapsule.data[0];
+        return {
+          title: first.title,
+          id: first.id,
+          description: first.description,
+          images: first.capsule_image.filter((i) => !i.is_cover),
+          route: ROUTES.CAPSULE_VIEW(first.id),
+          image_cover: (
+            first.capsule_image.find((i) => i.is_cover) as CapsuleImage
+          ).image_url,
+        };
+      }
+    }
+  }
+
+  return { createCapsule, getAllCapsules, findCapsuleById };
 }
