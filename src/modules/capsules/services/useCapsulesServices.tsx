@@ -92,10 +92,10 @@ export function useCapsulesServices() {
   }
 
   async function getLastCapsuleID(): Promise<number> {
-    const allCapsules = (await supabase.from("capsule").select()).data;
+    const allCapsules = await supabase.from("capsule").select();
 
-    if (allCapsules) {
-      return allCapsules[allCapsules.length - 1].id as number;
+    if (allCapsules.data) {
+      return allCapsules.data[allCapsules.data.length - 1].id as number;
     } else {
       throw new CreateCapsuleError();
     }

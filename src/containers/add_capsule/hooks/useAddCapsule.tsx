@@ -74,14 +74,14 @@ export function useAddCapsule() {
       }
     }
 
-    setCapsuleForm({
-      ...capsuleForm,
-      images: [...capsuleForm.images, ...allImages],
-    });
+    setCapsuleForm((prev) => ({
+      ...prev,
+      images: [...prev.images, ...allImages],
+    }));
   }
 
   function handleSelectImageCover(imageIndex: number): void {
-    setCapsuleForm({ ...capsuleForm, imageCover: imageIndex });
+    setCapsuleForm((prev) => ({ ...prev, imageCover: imageIndex }));
   }
 
   async function handleSubmit() {
