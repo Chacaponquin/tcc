@@ -1,8 +1,4 @@
-import { CAPSULES } from "@/modules/capsules/constants/CAPSULES";
-import {
-  Capsule,
-  CapsuleImage,
-} from "@/modules/capsules/interfaces/capsule.interface";
+import { Capsule } from "@/modules/capsules/interfaces/capsule.interface";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
